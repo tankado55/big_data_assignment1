@@ -1,3 +1,5 @@
+from typing import Any
+
 
 class IntercompanyData(object):
     def __init__(self):
@@ -19,3 +21,14 @@ class IntercompanyData(object):
     def timestamp(self):
         del self._timestamp
 
+    @property
+    def other_company(self):
+        return self._other_company
+
+    @other_company.setter
+    def other_company(self, value):
+        self._other_company = value
+
+    @other_company.deleter
+    def other_company(self):
+        del self._other_company

@@ -6,9 +6,9 @@ class QueryParametersStream:
     group = None
 
 
-class QueryParametersAggregated:
-    tables_aggregate = None
-    month_aggregate = None
-    order_aggregate = None
-    group_aggregate = None
-    etc_aggregate = None
+class QueryParametersHistorical:
+    tables_historical = None
+    month_historical = None
+    order_historical = None
+    group_historical = None
+    etc_historical = None

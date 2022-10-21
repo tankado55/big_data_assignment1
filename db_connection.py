@@ -10,5 +10,4 @@ class DbConnection (ABC):
         # come funziona il polimorfismo in python?
         pass
 
-    def get_data(self, conn, query_parameters):
-        pass
+    #TODO context manager
