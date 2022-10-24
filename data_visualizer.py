@@ -1,8 +1,15 @@
+from abc import ABC, abstractmethod
+from intercompany_data import IntercompanyData
 # Take the intercompany_data from the historical DB
 # and visualize it
-class DataVisualizer:
+class DataVisualizer(ABC):
 
-    def draw_data(self, hist_db_conn, query, visualization_parameters):
+    @abstractmethod
+    def retrieve_data(self, hist_db_conn, query) -> IntercompanyData:
+        pass
+
+    @abstractmethod
+    def draw_data(self, intercompany_data, visualization_parameters):
         pass
 
 
