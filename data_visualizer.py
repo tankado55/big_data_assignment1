@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from intercompany_data import IntercompanyData
 # Take the intercompany_data from the historical DB
 # and visualize it
+
 class DataVisualizer(ABC):
 
     @abstractmethod

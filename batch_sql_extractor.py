@@ -2,8 +2,9 @@ from abc import ABC, abstractmethod
 from intercompany_data import IntercompanyData
 
 
-# Get the stream of NEW DATA (from last month) from the DB and aggregate it in the form of
-# intercompany_data to later put them in the historical DB
+# Get the stream of NEW DATA (from last month) from OneStrem
+# and aggregate it in the form of intercompany_data and then
+# put them in the historical DB
 class BatchSQLExtractor(ABC):
     # Get the stream of NEW DATA (from last month) from the DB and
     # aggregate it in the form of intercompany_data
