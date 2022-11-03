@@ -10,3 +10,5 @@ class DbConnection (ABC):
     @contextmanager
     def get_conn(self, server, db_name, credential):
         pass
+
+#TODO DB connection pseudocode

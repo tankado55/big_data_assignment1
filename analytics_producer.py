@@ -12,3 +12,5 @@ class AnalyticsProducer():
     # public, uses the two methods above, used by some public api
     def get_analytics(self):
         pass
+
+#TODO sliding windows pseudocode
