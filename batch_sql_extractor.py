@@ -5,6 +5,8 @@ from intercompany_data import IntercompanyData
 # Get the stream of NEW DATA (from last month) from OneStrem
 # and aggregate it in the form of intercompany_data and then
 # put them in the historical DB
+# the methods are abstract because the module that provides
+# the data stream can change
 class BatchSQLExtractor(ABC):
     # Get the stream of NEW DATA (from last month) from the DB and
     # aggregate it in the form of intercompany_data

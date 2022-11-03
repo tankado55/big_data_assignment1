@@ -1,17 +1,19 @@
 The following is an example architecture for a company that needs to show their Balance Sheet of the last six months.
 
 # Pillar 1: Being the framework for satisfying requirements
-To not have impact on the OneStream performance, an Historical Data DB is built to store data extracted from the stream.
+To not have impact on the OneStream performance, an Historical Data DB is built to store data extracted from the stream. Only the needed data are extracted from the stream and elaborated as IntercompanyData objects, to satisfy the requirenments and guarantee efficiency.
 In this way our front-end module is able to retrieve the necessary data in an efficient way. 
 
-Our Historical DB is sufficently large to store 6 months old data. At the end of the month, analytics are created and datas older than 6 months are deleted from the DB. This is done because only datas from six months are required. 
+Our Historical DB is sufficently large to store 6 months old data. At the end of the month, analytics are created and data older than 6 months are deleted from the DB. This is done because only datas from six months are required.
+
 
 # Pillar 2: Being the technical basis for design
 Our Architecture is composed of abstract classes that explicit the interactions betweeen the OneStream component, the Historical DB and the front-end client.
 
-BatchSQLExtractor: Class used to get the stream of new data from OneStrem and aggregate it to put them in the Historical DB.
+BatchSQLExtractor: Class used to get the stream of new data from OneStrem (EXTRACT) and aggregate (TRANSFORM) it to put them in the Historical DB (LOAD).
 
-AnalyticsProducer: Class used to produce analytics from datas kept in the Historical DB.
+AnalyticsProducer: Class used to produce analytics from data retrieved from the Historical DB. It will be used from public APIs in order to provide analytics to external applications.
+These application will be in charge of drawing the data in charts, ecc.
 
 DataVisualizer: 
 
