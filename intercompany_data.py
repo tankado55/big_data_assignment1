@@ -1,7 +1,11 @@
-from typing import Any
 
-
+# Class that represents aggregated data from the stream.
+# Every object has a timestamp and an other_company parameter
+# to identify the company it was generated from.
+# There are additional parameters (value1, value2 ecc) that
+# can be filled with additional infos of interest.
 class IntercompanyData(object):
+
     def __init__(self):
         self._timestamp = None
         self._other_company = None
